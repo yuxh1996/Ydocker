@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/yuxh1996/Ydocker/cgroups/subsystems"
 
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
@@ -39,7 +40,7 @@ var runCommand = cli.Command{
 			cmdArray = append(cmdArray, arg)
 		}
 		tty := context.Bool("ti")
-		resConf := &subsysstems.ResourceConfig{
+		resConf := &subsystems.ResourceConfig{
 			MemoryLimit: context.String("m"),
 			CpuSet:      context.String("cpuset"),
 			CpuShare:    context.String("cpushare"),

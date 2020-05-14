@@ -1,4 +1,4 @@
-package subsytems
+package subsystems
 
 type ResourceConfig struct {
 	MemoryLimit string
